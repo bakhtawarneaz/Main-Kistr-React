@@ -1,11 +1,36 @@
 import React, { useState } from 'react'
 import { Breadcrumb, Layout, Menu } from 'antd';
-import { Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import { items } from '../utility/MenuItems';
+
+
 const { Header, Content, Footer, Sider } = Layout;
+const { SubMenu } = Menu;
 
-
-
+const renderMenuItems = (menuItems) => {
+  return menuItems.map((item) => {
+    if (item.children) {
+      return (
+        <SubMenu
+            key={item.key}
+            icon={item.icon}
+            title={item.label}
+          >
+            {item.children.map((child) => (
+              <Menu.Item key={child.key} icon={child.icon}>
+                <Link to={`/${child.key}`}>{child.label}</Link>
+              </Menu.Item>
+            ))}
+          </SubMenu>
+      );
+    }
+    return (
+      <Menu.Item key={item.key} icon={item.icon}>
+        <Link to={`/${item.key}`}>{item.label}</Link>
+      </Menu.Item>
+    );
+  });
+};
 
 const DashboardLayout = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -17,7 +42,9 @@ const DashboardLayout = () => {
   >
     <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
       <div className="demo-logo-vertical" />
-      <Menu theme="dark" defaultSelectedKeys={['dashboard']} mode="inline" items={items}  />
+      <Menu theme="dark" defaultSelectedKeys={['dashboard/home']} mode="inline">
+          {renderMenuItems(items)}
+        </Menu>
     </Sider>
     <Layout>
       <Header

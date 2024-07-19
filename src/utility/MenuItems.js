@@ -17,24 +17,24 @@ export function getItem(label, key, icon, children) {
 }
 
 export const items = [
-  getItem('Home', 'dashboard', <PieChartOutlined />),
+  getItem('Dashboard', 'dashboard/home', <PieChartOutlined />),
   getItem('Inbox', 'dashboard/inbox', <DesktopOutlined />),
-  getItem('Employees', 'dashboard/employees', <UserOutlined />, [
-    getItem('Overview', 'dashboard/employees/overview'),
-    getItem('Communication', 'dashboard/employees/communication'),
-    getItem('Absences', 'dashboard/employees/absences'),
-    getItem('Compensation', 'dashboard/employees/compensation'),
-    getItem('Payroll', 'dashboard/employees/payroll'),
-    getItem('Performance', 'dashboard/employees/performance'),
-    getItem('Training', 'dashboard/employees/training'),
-    getItem('Surveys', 'dashboard/employees/surveys'),
-    getItem('Whistleblowing', 'dashboard/employees/whistleblowing'),
+  getItem('Employees', 'employees', <UserOutlined />, [
+    getItem('Overview', 'dashboard/overview'),
+    getItem('Communication', 'dashboard/communication'),
+    getItem('Absences', 'dashboard/absences'),
+    getItem('Compensation', 'dashboard/compensation'),
+    getItem('Payroll', 'dashboard/payroll'),
+    getItem('Performance', 'dashboard/performance'),
+    getItem('Training', 'dashboard/training'),
+    getItem('Surveys', 'dashboard/surveys'),
+    getItem('Whistleblowing', 'dashboard/whistleblowing'),
   ]),
-  getItem('Recruiting', 'dashboard/recruiting', <TeamOutlined />, [
-    getItem('Overview', 'dashboard/recruiting/overview'), 
-    getItem('Vacancies', 'dashboard/recruiting/vacancies'),
-    getItem('Applications', 'dashboard/recruiting/applications'),
-    getItem('Communication', 'dashboard/recruiting/communication'),
+  getItem('Recruiting', 'recruiting', <TeamOutlined />, [
+    getItem('Overview', 'dashboard/overview'), 
+    getItem('Vacancies', 'dashboard/vacancies'),
+    getItem('Applications', 'dashboard/applications'),
+    getItem('Communication', 'dashboard/communication'),
   ]),
   getItem('Calendar', 'dashboard/calendar', <FileOutlined />),
   getItem('Reporting', 'dashboard/reporting', <FileOutlined />),

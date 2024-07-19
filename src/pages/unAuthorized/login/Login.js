@@ -41,7 +41,7 @@ const Login = () => {
                     </div>
                     <div className="login-form-btn">
                         <button className="site-btn btn-secondery">
-                            <Link to={'/dashboard'}>
+                            <Link to={'/dashboard/home'}>
                                 Sign in
                             </Link>
                         </button>

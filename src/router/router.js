@@ -24,6 +24,7 @@ import OverviewRecruiting from '../pages/authorized/Recruiting/Overview/Overview
 import Vacancies from '../pages/authorized/Recruiting/Vacancies/Vacancies';
 import Applications from '../pages/authorized/Recruiting/Applications/Applications';
 import CommunicationRecruiting from '../pages/authorized/Recruiting/Communication/CommunicationRecruiting';
+import Home from '../pages/authorized/home/Home';
 
 const router = createBrowserRouter([
     {
@@ -31,30 +32,31 @@ const router = createBrowserRouter([
         element: <Navigate to="/auth/login" />,
     },
     {
-        path: 'dashboard',
+        path: '/dashboard',
         element: <DashboardLayout />,
         children: [
-            { path: 'dashboard/inbox', element: <Inbox /> },
+            { path: 'home', element: <Home /> },
+            { path: 'inbox', element: <Inbox /> },
             { path: 'calendar', element: <Calendar /> },
             { path: 'reporting', element: <Reporting /> },
             { path: 'automations', element: <Automations /> },
             { path: 'imports', element: <Imports /> },
             { path: 'marketplace', element: <Marketplace /> },
             
-            { path: 'employees/overview', element: <Overview /> },
-            { path: 'employees/absences', element: <Absences /> },
-            { path: 'employees/communication', element: <Communication /> },
-            { path: 'employees/compensation', element: <Compensation /> },
-            { path: 'employees/payroll', element: <Payroll /> },
-            { path: 'employees/performance', element: <Performance /> },
-            { path: 'employees/surveys', element: <Surveys /> },
-            { path: 'employees/training', element: <Training /> },
-            { path: 'employees/whistleblowing', element: <Whistleblowing /> },
+            { path: 'overview', element: <Overview /> },
+            { path: 'absences', element: <Absences /> },
+            { path: 'communication', element: <Communication /> },
+            { path: 'compensation', element: <Compensation /> },
+            { path: 'payroll', element: <Payroll /> },
+            { path: 'performance', element: <Performance /> },
+            { path: 'surveys', element: <Surveys /> },
+            { path: 'training', element: <Training /> },
+            { path: 'whistleblowing', element: <Whistleblowing /> },
 
-            { path: 'recruiting/overview', element: <OverviewRecruiting /> },
-            { path: 'recruiting/vacancies', element: <Vacancies /> },
-            { path: 'recruiting/applications', element: <Applications /> },
-            { path: 'recruiting/communication', element: <CommunicationRecruiting /> },
+            { path: 'overview', element: <OverviewRecruiting /> },
+            { path: 'vacancies', element: <Vacancies /> },
+            { path: 'applications', element: <Applications /> },
+            { path: 'communication', element: <CommunicationRecruiting /> },
         ],
     },
     {
