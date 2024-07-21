@@ -1,0 +1,115 @@
+.aside-main {
+    transition: all 0.2s, background 0s;
+    position: relative;
+}
+
+.aside-main .ant-layout-sider-children {
+    height: 100%;
+    position: relative;
+}
+
+.aside-main ul {
+    background: #101828;
+    padding: 0 15px;
+}
+
+.sidebar-close-btn {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+.sidebar-close-btn button {
+    background: transparent;
+}
+
+.demo-logo-vertical {
+    padding: 24px 18px 30px;
+    margin-bottom: 10px;
+    background: linear-gradient(180deg, #5451f2 0%, #101828 100%);
+}
+
+.aside-main ul li {
+    margin: 0 !important;
+    padding: 12px 10px !important;
+    height: auto !important;
+    line-height: normal !important;
+    gap: 15px;
+}
+
+.aside-main ul li.ant-menu-item-selected {
+    background: #5451F2;
+}
+
+.aside-main ul li a{
+    font-size: var(--fontSize16);
+    font-family: var(--fontInter);
+    color: #fff !important;
+    display: block;
+}
+
+.aside-main ul li.ant-menu-submenu .ant-menu-submenu-title {
+    margin: 0;
+    padding: 0 !important;
+    height: auto !important;
+    line-height: normal;
+    gap: 15px;
+}
+
+.aside-main .ant-menu-submenu-title .ant-menu-title-content {
+    font-size: var(--fontSize16);
+    font-family: var(--fontInter);
+    color: #fff !important;
+}
+
+.aside-main ul li.ant-menu-submenu ul.ant-menu-sub {
+    background: #101828 !important;
+    margin-top: 10px;
+}
+
+.aside-main ul li.ant-menu-submenu ul.ant-menu-sub li {
+    padding: 12px 0 12px 35px !important;
+}
+
+.aside-main ul li.ant-menu-submenu .ant-menu-submenu-title i {
+    color: #fff;
+}
+
+.ant-menu-submenu-popup {
+    background: #101828 !important;
+}
+
+.ant-menu-submenu-popup ul {
+    background: #101828 !important;
+    min-width: 250px !important;
+    padding: 10px !important;
+}
+
+.ant-menu-submenu-popup ul li {
+    margin: 0 !important;
+    padding: 10px 10px !important;
+    height: auto !important;
+    line-height: normal !important;
+    border-bottom: 1px solid rgba(246, 249, 253, 0.20);
+    width: 100% !important;
+}
+
+.ant-menu-submenu-popup ul li:last-child{
+    border:0;
+}
+
+.ant-menu-submenu-popup ul li span {
+    display: block;
+}
+
+.ant-menu-submenu-popup ul li span a {
+    display: block;
+    font-size: var(--fontSize16);
+    font-family: var(--fontInter);
+    color: #fff !important;
+}

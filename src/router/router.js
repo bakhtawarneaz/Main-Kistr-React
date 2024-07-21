@@ -53,10 +53,10 @@ const router = createBrowserRouter([
             { path: 'training', element: <Training /> },
             { path: 'whistleblowing', element: <Whistleblowing /> },
 
-            { path: 'overview', element: <OverviewRecruiting /> },
+            { path: 'recruiting-overview', element: <OverviewRecruiting /> },
             { path: 'vacancies', element: <Vacancies /> },
             { path: 'applications', element: <Applications /> },
-            { path: 'communication', element: <CommunicationRecruiting /> },
+            { path: 'recruiting-communication', element: <CommunicationRecruiting /> },
         ],
     },
     {

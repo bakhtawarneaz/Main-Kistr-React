@@ -1,11 +1,15 @@
 import React from 'react';
-import {
-  DesktopOutlined,
-  FileOutlined,
-  PieChartOutlined,
-  TeamOutlined,
-  UserOutlined,
-} from '@ant-design/icons';
+
+/******** Dashboard Icons******/
+import DashboardIcon from '../icons/DashboardIcon';
+import InboxIcon from '../icons/InboxIcon';
+import EmployeeIcon from '../icons/EmployeeIcon';
+import CalenderIcon from '../icons/CalenderIcon';
+import ReportingIcon from '../icons/ReportingIcon';
+import AutomationIcon from '../icons/AutomationIcon';
+import ImportIcon from '../icons/ImportIcon';
+import MarketIcon from '../icons/MarketIcon'
+
 
 export function getItem(label, key, icon, children) {
   return {
@@ -17,9 +21,9 @@ export function getItem(label, key, icon, children) {
 }
 
 export const items = [
-  getItem('Dashboard', 'dashboard/home', <PieChartOutlined />),
-  getItem('Inbox', 'dashboard/inbox', <DesktopOutlined />),
-  getItem('Employees', 'employees', <UserOutlined />, [
+  getItem('Dashboard', 'dashboard/home', <DashboardIcon />),
+  getItem('Inbox', 'dashboard/inbox', <InboxIcon />),
+  getItem('Employees', 'employees', <EmployeeIcon />, [
     getItem('Overview', 'dashboard/overview'),
     getItem('Communication', 'dashboard/communication'),
     getItem('Absences', 'dashboard/absences'),
@@ -30,15 +34,15 @@ export const items = [
     getItem('Surveys', 'dashboard/surveys'),
     getItem('Whistleblowing', 'dashboard/whistleblowing'),
   ]),
-  getItem('Recruiting', 'recruiting', <TeamOutlined />, [
-    getItem('Overview', 'dashboard/overview'), 
+  getItem('Recruiting', 'recruiting', <EmployeeIcon />, [
+    getItem('Overview', 'dashboard/recruiting-overview'), 
     getItem('Vacancies', 'dashboard/vacancies'),
     getItem('Applications', 'dashboard/applications'),
-    getItem('Communication', 'dashboard/communication'),
+    getItem('Communication', 'dashboard/recruiting-communication'),
   ]),
-  getItem('Calendar', 'dashboard/calendar', <FileOutlined />),
-  getItem('Reporting', 'dashboard/reporting', <FileOutlined />),
-  getItem('Automations', 'dashboard/automations', <FileOutlined />),
-  getItem('Imports', 'dashboard/imports', <FileOutlined />),
-  getItem('Marketplace', 'dashboard/marketplace', <FileOutlined />),
+  getItem('Calendar', 'dashboard/calendar', <CalenderIcon />),
+  getItem('Reporting', 'dashboard/reporting', <ReportingIcon />),
+  getItem('Automations', 'dashboard/automations', <AutomationIcon />),
+  getItem('Imports', 'dashboard/imports', <ImportIcon />),
+  getItem('Marketplace', 'dashboard/marketplace', <MarketIcon />),
 ];

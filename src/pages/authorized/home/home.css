@@ -1,0 +1,201 @@
+.page-title-widget h1 {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.home-4boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  .home-4boxes > div {
+    padding: 16px;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 1px 1px 2.8px 0px rgba(0, 0, 0, 0.25);
+  }
+  .home-boxe-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  .home-boxe-header h3 {
+    font-weight: 500;
+  }
+  .home-boxe-header p {
+    font-size: var(--fontSize12);
+  }
+  .home-boxe-header .btn-gray {
+    padding: 3px 10px;
+  }
+  .home-inbox-listing-widget {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+  .inbox-list-widget {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .inbox-list-widget li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  .inbox-list-widget li .userimg {
+    margin-right: 10px;
+  }
+  .inbox-list-widget li .userimg img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .inbox-list-widget li .user-info {
+    font-size: var(--fontSize12);
+  }
+  .inbox-list-widget li .user-info p:first-child {
+    margin-bottom: 2px;
+  }
+  .inbox-list-widget li .user-info strong {
+    color: var(--primeray-color);
+  }
+  
+  .action-btn {
+    margin-left: auto;
+    display: none;
+  }
+  .action-btn button {
+    margin: 0 2px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+  }
+  .inbox-list-widget li:hover .action-btn {
+    display: block;
+  }
+  .home-calender-widget {
+    flex: 0 0 56%;
+    max-width: 56%;
+  }
+  .dPicker-widget {
+    display: flex;
+    gap: 10px;
+  }
+  .dPicker-calender {
+    flex: 1;
+  }
+  
+.dPicker-info {
+    flex: 1;
+    padding-left:30px;
+}
+
+  .dPicker-info h4 {
+    font-weight: normal;
+    margin-bottom: 15px;
+  }
+  
+  .home-recruiting-widget {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+  .recruit-list-widget {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .recruit-list-widget li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  .recruit-list-widget li .recruit-icon {
+    margin-right: 10px;
+  }
+  .recruit-list-widget li .recruit-icon img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .recruit-list-widget li .recruit-info {
+    font-size: var(--fontSize12);
+  }
+  .recruit-list-widget li .recruit-info p:first-child {
+    margin-bottom: 2px;
+  }
+  .recruit-list-widget li .recruit-info strong {
+    color: var(--primeray-color);
+  }
+  .home-orgchart-widget {
+    flex: 0 0 56%;
+    max-width: 56%;
+  }
+
+
+.home-inbox-listing-widget .ant-tabs-nav {
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--inputBorder);
+}
+
+.home-inbox-listing-widget  .ant-tabs-nav-list {
+    flex: 0 0 100%;
+}
+
+.site-wraper .home-inbox-listing-widget .ant-tabs-tab {
+    flex: 0 0 33.33333%;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.home-inbox-listing-widget .ant-tabs-nav-wrap:before,
+.home-inbox-listing-widget .ant-tabs-nav-wrap:after {
+    display: none;
+}
+
+.site-wraper .home-inbox-listing-widget .ant-tabs-tab .ant-tabs-tab-btn {
+    padding: 10px 0;
+    border-radius: 6px;
+    display: block;
+    color: var(--textGray);
+    font-size: var(--fontSize12);
+    width: 100%;
+    text-align: center;
+}
+
+.site-wraper .home-inbox-listing-widget .ant-tabs-tab-active .ant-tabs-tab-btn {
+    background: #F9FAFB;
+    font-weight: bold;
+}
+
+.home-inbox-listing-widget .ant-tabs-ink-bar {
+    display: none;
+}
+
+.site-wraper .ant-picker-calendar-header {
+    justify-content: flex-start;
+}
+
+.site-wraper .ant-picker-panel table .ant-picker-cell-selected .ant-picker-cell-inner {
+    background: #3A38A9 !important;
+    border-radius: 50%;
+    min-width: 35px;
+    height: 35px;
+    line-height: 35px;
+}
+
+.site-wraper .ant-picker-panel table .ant-picker-cell-selected .ant-picker-cell-inner:before {
+    display: none;
+}

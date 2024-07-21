@@ -1,10 +1,17 @@
 import React, { useState } from 'react'
-import { Breadcrumb, Layout, Menu } from 'antd';
+import { Layout, Menu } from 'antd';
 import { Link, Outlet } from 'react-router-dom';
 import { items } from '../utility/MenuItems';
+import sidebarCloseBtn from'../img/angle-double.png';
+import mainLogo from'../img/kistr-logo.svg';
+import Search from'../img/search.png';
+import Setting from'../img/settings.png';
+import Bell from'../img/bell.png';
+import Profile from'../img/profile.png';
 
+import './dashboard.css'
 
-const { Header, Content, Footer, Sider } = Layout;
+const { Sider } = Layout;
 const { SubMenu } = Menu;
 
 const renderMenuItems = (menuItems) => {
@@ -35,54 +42,67 @@ const renderMenuItems = (menuItems) => {
 const DashboardLayout = () => {
   const [collapsed, setCollapsed] = useState(false);
   return (
-    <Layout
-    style={{
-      minHeight: '100vh',
-    }}
-  >
-    <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
-      <div className="demo-logo-vertical" />
-      <Menu theme="dark" defaultSelectedKeys={['dashboard/home']} mode="inline">
-          {renderMenuItems(items)}
-        </Menu>
-    </Sider>
-    <Layout>
-      <Header
-        style={{
-          padding: 0,
-        }}
-      />
-      <Content
-        style={{
-          margin: '0 16px',
-        }}
+   <>
+    <div className='site-wraper'> 
+      <Sider 
+        trigger={null} 
+        collapsible 
+        collapsed={collapsed} 
+        onCollapse={(value) => setCollapsed(value)} 
+        className='aside-main' 
+        width={300}
+        breakpoint="md"
       >
-        <Breadcrumb
-          style={{
-            margin: '16px 0',
-          }}
-        >
-          <Breadcrumb.Item>User</Breadcrumb.Item>
-          <Breadcrumb.Item>Bill</Breadcrumb.Item>
-        </Breadcrumb>
-        <div
-          style={{
-            padding: 24,
-            minHeight: 360,
-          }}
-        >
-          <Outlet />
+        <div className="demo-logo-vertical">
+          <img src={mainLogo} alt="KISTR Logo" />
         </div>
-      </Content>
-      <Footer
-        style={{
-          textAlign: 'center',
-        }}
-      >
-        Ant Design ©{new Date().getFullYear()} Created by Ant UED
-      </Footer>
-    </Layout>
-  </Layout>
+        <Menu theme="dark" defaultSelectedKeys={['dashboard/home']} mode="inline">
+            {renderMenuItems(items)}
+        </Menu>
+        <div className='sidebar-close-btn'>
+            <button onClick={() => setCollapsed(!collapsed)}>
+              <img src={sidebarCloseBtn} alt="" />
+            </button>
+        </div>
+      </Sider>
+      <main className="site-main">
+          <header className="main-header">
+              <div className="search-widget-top">
+                  <div className="input-wrap input-placeholder-light">
+                      <button className="input-icon">
+                          <span className="icon-img">
+                          <img src={Search} alt="" /></span>
+                        </button>
+                      <input type="search" className="input-elm" name="" id="" placeholder="Search" />
+                  </div>
+              </div>
+              <div className="header-right-elms">
+                  <div className="search-elm right-elm-icon">
+                      <button><span className="icon-img">
+                        <img src={Search} alt="" /></span>
+                      </button>
+                  </div>
+                  <div className="setting-elm right-elm-icon">
+                      <button><span className="icon-img">
+                        <img src={Setting} alt="" /></span>
+                      </button>
+                  </div>
+                  <div className="bell-elm right-elm-icon">
+                      <button><span className="icon-img">
+                        <img src={Bell} alt="" /></span>
+                      </button>
+                  </div>
+                  <div className="user-elm right-elm-icon">
+                      <button><img src={Profile} alt="" /></button>
+                  </div>
+              </div>
+          </header>
+          <div className='main-body'>
+              <Outlet />
+          </div>
+      </main>
+    </div>
+    </>
   )
 }
 
