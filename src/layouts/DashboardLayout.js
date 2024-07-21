@@ -37,7 +37,7 @@ const renderMenuItems = (menuItems) => {
       </Menu.Item>
     );
   });
-};
+}; 
 
 const DashboardLayout = () => {
   const [collapsed, setCollapsed] = useState(false);
